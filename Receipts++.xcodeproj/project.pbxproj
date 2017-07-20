@@ -14,6 +14,8 @@
 		EDE886ED1F21182700634B07 /* Receipts__.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDE886EB1F21182700634B07 /* Receipts__.xcdatamodeld */; };
 		EDE886EF1F21182700634B07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE886EE1F21182700634B07 /* Assets.xcassets */; };
 		EDE886F21F21182700634B07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE886F01F21182700634B07 /* LaunchScreen.storyboard */; };
+		EDE886FB1F211BD700634B07 /* Receipt.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE886FA1F211BD700634B07 /* Receipt.m */; };
+		EDE886FE1F211EC000634B07 /* AddReceiptsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE886FD1F211EC000634B07 /* AddReceiptsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		EDE886EE1F21182700634B07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDE886F11F21182700634B07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDE886F31F21182700634B07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDE886F91F211BD700634B07 /* Receipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Receipt.h; sourceTree = "<group>"; };
+		EDE886FA1F211BD700634B07 /* Receipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Receipt.m; sourceTree = "<group>"; };
+		EDE886FC1F211EC000634B07 /* AddReceiptsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddReceiptsViewController.h; sourceTree = "<group>"; };
+		EDE886FD1F211EC000634B07 /* AddReceiptsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddReceiptsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +70,11 @@
 				EDE886E31F21182700634B07 /* AppDelegate.m */,
 				EDE886E51F21182700634B07 /* ViewController.h */,
 				EDE886E61F21182700634B07 /* ViewController.m */,
+				EDE886FC1F211EC000634B07 /* AddReceiptsViewController.h */,
+				EDE886FD1F211EC000634B07 /* AddReceiptsViewController.m */,
 				EDE886E81F21182700634B07 /* Main.storyboard */,
+				EDE886F91F211BD700634B07 /* Receipt.h */,
+				EDE886FA1F211BD700634B07 /* Receipt.m */,
 				EDE886EE1F21182700634B07 /* Assets.xcassets */,
 				EDE886F01F21182700634B07 /* LaunchScreen.storyboard */,
 				EDE886F31F21182700634B07 /* Info.plist */,
@@ -155,6 +165,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDE886ED1F21182700634B07 /* Receipts__.xcdatamodeld in Sources */,
+				EDE886FE1F211EC000634B07 /* AddReceiptsViewController.m in Sources */,
+				EDE886FB1F211BD700634B07 /* Receipt.m in Sources */,
 				EDE886E71F21182700634B07 /* ViewController.m in Sources */,
 				EDE886E41F21182700634B07 /* AppDelegate.m in Sources */,
 				EDE886E11F21182700634B07 /* main.m in Sources */,
