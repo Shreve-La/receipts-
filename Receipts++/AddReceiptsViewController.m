@@ -7,8 +7,17 @@
 //
 
 #import "AddReceiptsViewController.h"
+#import "AppDelegate.h"
+@import CoreData;
 
-@interface AddReceiptsViewController ()
+
+@interface AddReceiptsViewController ()<UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *amountField;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionField;
+@property (weak, nonatomic) AppDelegate *appDelegate;
+
+
 
 @end
 
@@ -16,6 +25,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    self.context = self.appDelegate.context;
+    
     // Do any additional setup after loading the view.
 }
 
@@ -24,13 +36,39 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
 
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    
+    
+    return cell;
+}
+
+
+- (IBAction)saveReceipt:(id)sender {
+    if (self.amountField.text.length == 0) {
+        NSLog(@"publisher name is empty");
+        return;
+    }
+    NSManagedObjectContext *context = [self getContext];
+    Publisher *publisher = [NSEntityDescription insertNewObjectForEntityForName:@"Publisher" inManagedObjectContext:context];
+    publisher.name = textField.text;
+    [[self appDelegate] saveContext];
+    [self fetchPublisher];
+}
 
 
 }
 
+
+- (IBAction)clearFields:(id)sender {
+    //pop view controller
+}
 
 
 /*
